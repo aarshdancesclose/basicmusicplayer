@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #000000, #2575fc);
+            margin: 0;
+        }
+        .login-wrapper {
+            background: rgb(255, 255, 255);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #000000;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            background-color: #858585;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #000000;
+        }
+        p {
+            margin-top: 15px;
+            color: #777;
+        }
+        a {
+            color: hsl(249, 100%, 66%);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-wrapper">
+        <h1>Login</h1>
+        <form id="login-form" onsubmit="return handleLogin(event)">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <p><a href="index.html">Back to Music Player</a></p>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Here you can add your authentication logic
+            // For now, we'll just redirect to the music player
+            window.location.href = "index.html"; // Redirect to the music player
+        }
+    </script>
+</body>
+</html>
